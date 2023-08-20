@@ -1,0 +1,15 @@
+create a short cut with the Name ReadMe.Md pointing to Tamil file name
+
+    In your Git shell, in the root directory of your repository, enable symlinks for the current repo:
+
+    git config core.symlinks true
+
+    Now run cmd.exe as administrator¹ and cd to the repository root. Make your symlink:
+
+    mkdir .github
+    cd .github
+    mklink ReadMe.md ..\என்னைப்படி.உரை
+
+    Note that the name of the link goes before the name of the real file here, in contrast with the Linux and macOS instructions above. You can close cmd.exe now and go back to Git Bash.
+
+Now commit .github/README.md and push to GitHub. You'll probably want to make sure that there isn't a real README file in any of the other locations GitHub uses (the repository root or a docs/ folder in the repository root).
